@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    background-image: url(https://i.pinimg.com/736x/b0/23/ac/b023ac8b97119e6cbc6968669b630781.jpg);
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.profile-picture {
+    width: 40px; /* Make the size larger for a prominent look */
+    height: 40px;
+    border-radius: 50%; /* Circular shape */
+    object-fit: cover; /* Crops the image to fit in the circular frame */
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2); /* Shadow for a raised look */
+    margin-right: 10px; /* Space from other elements */
+}
+
+
+nav{
+    background-color: rgba(0, 0, 0, 0.712);
+    backdrop-filter: blur(10);
+    box-shadow: 3px 3px 5px rgba(red, green, blue, 0.1);
+
+}
+
+nav ul{
+    width: 100%;
+    height: 60px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+nav a:hover{
+    background-color: lightgray;
+    color: black;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.089);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(red, green, blue, 0.1);
+    display: none; 
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.sidebar-button{
+    display: none;
+}
+
+@media(max-width: 700px){
+    .hideOnMobile{
+        display: none;
+    }
+    .sidebar-button{
+        display: block;
+    }
+    .sidebar{
+        width: 100%;
+    }
+}
